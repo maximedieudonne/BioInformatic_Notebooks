@@ -19,3 +19,8 @@ sphinx:
       github_repo: BioInformatic_Notebooks
       github_version: master
       doc_path: book
+
+launch_buttons:
+  binderhub_url: "https://mybinder.org"
+  notebook_interface: "jupyterlab"
+  thebe: true

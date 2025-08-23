@@ -12,5 +12,5 @@ dependencies:
   - requests
   - pip
   - pip:
-      - myst-nb       
-      - jupytext>=0.16 
+      - myst-nb
+      - jupytext>=0.16
