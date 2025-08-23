@@ -1,14 +1,19 @@
 name: build-and-deploy-site
 on:
   push:
-    branches: [master]   # ou main
+    branches: [master]  
   workflow_dispatch:
+
+permissions:
+  contents: write 
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -24,11 +29,17 @@ jobs:
       - name: Build Jupyter Book
         run: jupyter-book build book
 
-      - name: Merge Jupyter Book into MkDocs site
+      - name: Merge Book into MkDocs site
         run: |
           mkdir -p site/notebooks
           rsync -av --delete book/_build/html/ site/notebooks/
-          touch site/.nojekyll   # indispensable pour servir _static/_images
+          touch site/.nojekyll
+
+      - name: Configure git for push
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
 
       - name: Deploy to gh-pages
         run: ghp-import -n -p -f site
