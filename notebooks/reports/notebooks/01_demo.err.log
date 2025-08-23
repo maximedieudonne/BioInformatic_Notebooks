@@ -25,28 +25,26 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Initialisation 
+# Init vérification Thebe/Binder
 import sys, platform
-import numpy as np
-import pandas as pd
+print("Python:", sys.version.split()[0], "|", platform.platform())
 
-print("Python:", sys.version.split()[0])
-print("NumPy:", np.__version__, "| Pandas:", pd.__version__)
-print("Platform:", platform.platform())
-
-np.random.seed(0)
+import numpy as np, pandas as pd, matplotlib
+print("NumPy:", np.__version__, "| Pandas:", pd.__version__, "| Matplotlib:", matplotlib.__version__)
 
 ------------------
 
+----- stdout -----
+Python: 3.11.13 | Linux-6.11.0-1018-azure-x86_64-with-glibc2.39
+------------------
 
 [31m---------------------------------------------------------------------------[39m
 [31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 3[39m
-[32m      1[39m [38;5;66;03m# Initialisation [39;00m
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 5[39m
 [32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01msys[39;00m,[38;5;250m [39m[34;01mplatform[39;00m
-[32m----> [39m[32m3[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
-[32m      4[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mpandas[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mpd[39;00m
-[32m      6[39m [38;5;28mprint[39m([33m"[39m[33mPython:[39m[33m"[39m, sys.version.split()[[32m0[39m])
+[32m      3[39m [38;5;28mprint[39m([33m"[39m[33mPython:[39m[33m"[39m, sys.version.split()[[32m0[39m], [33m"[39m[33m|[39m[33m"[39m, platform.platform())
+[32m----> [39m[32m5[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m,[38;5;250m [39m[34;01mpandas[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mpd[39;00m,[38;5;250m [39m[34;01mmatplotlib[39;00m
+[32m      6[39m [38;5;28mprint[39m([33m"[39m[33mNumPy:[39m[33m"[39m, np.__version__, [33m"[39m[33m| Pandas:[39m[33m"[39m, pd.__version__, [33m"[39m[33m| Matplotlib:[39m[33m"[39m, matplotlib.__version__)
 
 [31mModuleNotFoundError[39m: No module named 'numpy'
 
