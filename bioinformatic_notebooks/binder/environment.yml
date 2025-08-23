@@ -1,0 +1,19 @@
+name: neuromorpho-ml
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - ipykernel
+  - jupyterlab
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - requests
+  - pip
+  - pip:
+      - jupyter-book
+      - myst-nb
+      - jupytext>=0.16
+      - nbclient
+      - nbconvert

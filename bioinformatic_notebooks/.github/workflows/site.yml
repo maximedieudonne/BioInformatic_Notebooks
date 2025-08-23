@@ -1,0 +1,34 @@
+name: build-and-deploy-site
+on:
+  push:
+    branches: [master]   # ou main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install site builders
+        run: |
+          pip install mkdocs-material jupyter-book ghp-import
+
+      - name: Build MkDocs
+        run: mkdocs build --clean
+
+      - name: Build Jupyter Book
+        run: jupyter-book build book
+
+      - name: Merge Jupyter Book into MkDocs site
+        run: |
+          mkdir -p site/notebooks
+          rsync -av --delete book/_build/html/ site/notebooks/
+          touch site/.nojekyll   # indispensable pour servir _static/_images
+
+      - name: Deploy to gh-pages
+        run: ghp-import -n -p -f site

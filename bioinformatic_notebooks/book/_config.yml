@@ -1,0 +1,18 @@
+title: NeuroMorpho ML – Notebooks
+only_build_toc_files: true
+repository:
+  url: https://github.com/maximedieudonne/BioInformatic_notebooks/
+  path_to_book: book
+  branch: master
+launch_buttons:
+  binderhub_url: "https://mybinder.org"
+  notebook_interface: "jupyterlab"
+  thebe: true
+execute:
+  execute_notebooks: "off"
+  timeout: 120
+sphinx:
+  config:
+    html_theme_options:
+      use_repository_button: true
+      use_issues_button: true
