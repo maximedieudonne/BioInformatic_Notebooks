@@ -1,7 +1,7 @@
 title: NeuroMorpho ML – Notebooks
 only_build_toc_files: true
 repository:
-  url: https://github.com/maximedieudonne/BioInformatic_notebooks/
+  url: https://github.com/maximedieudonne/BioInformatic_Notebooks/
   path_to_book: book
   branch: master
 launch_buttons:
