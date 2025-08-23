@@ -1,5 +1,4 @@
 format: jb-book
 root: index
 chapters:
-  - file: notebooks/01_demo
-  
+  - file: notebooks/01_demo.ipynb
