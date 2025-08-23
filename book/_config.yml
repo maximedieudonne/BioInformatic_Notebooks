@@ -1,6 +1,11 @@
 title: BioInformatic Notebooks
 only_build_toc_files: true
 
+launch_buttons:
+  binderhub_url: "https://mybinder.org"
+  notebook_interface: "jupyterlab"
+  thebe: true
+
 repository:
   url: https://github.com/maximedieudonne/BioInformatic_Notebooks
   path_to_book: book
@@ -13,6 +18,7 @@ sphinx:
       use_edit_page_button: true
       use_issues_button: true
       repository_url: https://github.com/maximedieudonne/BioInformatic_Notebooks
+      repository_branch: master 
       path_to_docs: "book"
     html_context:
       github_user: maximedieudonne
@@ -20,7 +26,3 @@ sphinx:
       github_version: master
       doc_path: book
 
-launch_buttons:
-  binderhub_url: "https://mybinder.org"
-  notebook_interface: "jupyterlab"
-  thebe: true
