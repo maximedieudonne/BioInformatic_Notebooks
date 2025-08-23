@@ -12,8 +12,5 @@ dependencies:
   - requests
   - pip
   - pip:
-      - jupyter-book
-      - myst-nb
-      - jupytext>=0.16
-      - nbclient
-      - nbconvert
+      - myst-nb       
+      - jupytext>=0.16 
