@@ -1,5 +1,5 @@
-# book/_config.yml
 title: BioInformatic Notebooks
+author: Maxime Dieudonné
 only_build_toc_files: true
 
 repository:
