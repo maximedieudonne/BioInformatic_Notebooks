@@ -5,8 +5,9 @@ only_build_toc_files: true
 # (option) Laisse "off" si tu veux uniquement l'interactif via Thebe.
 # Mets "auto" si tu veux des sorties statiques au build.
 execute:
-  execute_notebooks: "off"
-  timeout: 120
+  execute_notebooks: "auto"   # "auto" = exécute si pas d'outputs ; mets "force" pour exécuter à chaque build
+  timeout: 180
+  allow_errors: false
 
 # Indique à Jupyter Book où est ton repo (utile aux boutons & à Thebe/Binder)
 repository:
