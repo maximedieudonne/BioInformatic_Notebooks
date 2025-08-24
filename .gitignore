@@ -1,1 +1,64 @@
 
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+
+# venv / env
+.venv/
+venv/
+env/
+ENV/
+.conda/
+*.env
+
+# Packaging / build
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+
+# Tests / coverage / type checking
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.dmypy.json
+.pyre/
+.hypothesis/
+
+# --- Jupyter / Jupyter Book ---
+.ipynb_checkpoints/
+.jupyter/
+.jupyter_cache/
+book/_build/
+book/.jupyter_cache/
+
+# Si tu copies le Book dans docs/ pour le preview local
+docs/notebooks/
+
+# --- MkDocs ---
+site/
+
+# --- Editors / OS ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs & misc
+*.log
+*.tmp
+*.bak
+
+# Node (au cas où)
+node_modules/

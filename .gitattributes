@@ -1,0 +1,30 @@
+# Normalisation des fins de ligne
+* text=auto
+
+# Forcer LF pour les fichiers multiplateformes
+*.sh          text eol=lf
+*.py          text eol=lf
+*.ipynb       text eol=lf
+*.md          text eol=lf
+*.rst         text eol=lf
+*.yml         text eol=lf
+*.yaml        text eol=lf
+*.json        text eol=lf
+*.toml        text eol=lf
+*.js          text eol=lf
+*.css         text eol=lf
+*.html        text eol=lf
+*.svg         text eol=lf
+*.csv         text eol=lf
+binder/postBuild text eol=lf
+
+# Scripts Windows
+*.bat         text eol=crlf
+*.cmd         text eol=crlf
+*.ps1         text eol=crlf
+
+# (Les dossiers de build ne devraient pas être versionnés,
+# mais au cas où ils apparaissent, on évite des diffs verbeux)
+book/_build/** -diff
+site/**       -diff
+docs/notebooks/** -diff
