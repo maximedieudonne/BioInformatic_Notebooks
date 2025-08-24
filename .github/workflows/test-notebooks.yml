@@ -1,0 +1,15 @@
+name: test-notebooks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: .binder/environment.yml
+          cache-environment: true
+      - name: Run notebooks (nbmake)
+        run: |
+          pip install pytest nbmake
+          pytest -q --nbmake book/**/*.ipynb
