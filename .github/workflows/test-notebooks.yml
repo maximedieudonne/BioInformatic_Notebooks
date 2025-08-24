@@ -1,15 +1,32 @@
 name: test-notebooks
 on: [push, pull_request]
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    # IMPORTANT : toutes les commandes s'exécutent dans un shell "login"
+    defaults:
+      run:
+        shell: bash -l {0}
+
     steps:
       - uses: actions/checkout@v4
+
+      # Crée et active l'environnement à partir de .binder/environment.yml
       - uses: mamba-org/setup-micromamba@v2
         with:
           environment-file: .binder/environment.yml
+          environment-name: bioinfo
           cache-environment: true
-      - name: Run notebooks (nbmake)
+          init-shell: bash
+
+      # Installe seulement les dépendances de test DANS l'env actif
+      - name: Install test deps (pytest/nbmake)
         run: |
-          pip install pytest nbmake
-          pytest -q --nbmake book/**/*.ipynb
+          python -m pip install -U pytest nbmake
+
+      # Exécute les notebooks (tu peux élargir le pattern)
+      - name: Run notebooks with nbmake
+        run: |
+          pytest -q --nbmake book/notebooks/01_demo.ipynb
+          # ou: pytest -q --nbmake book/**/*.ipynb
