@@ -1,11 +1,13 @@
 format: jb-book
 root: index
-chapters:
+
+parts:
   - caption: "Notebooks"
-    sections:
+    chapters:
       - file: notebooks/01_demo
+
   - caption: "Tutos"
-    sections:
+    chapters:
       - file: tutos/prise-en-main
       - file: tutos/00_notes_120825
       - file: tutos/01_notes_120825
