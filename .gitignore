@@ -1,64 +1,41 @@
-
 # --- Python ---
 __pycache__/
 *.py[cod]
-*$py.class
 *.pyo
 *.pyd
 *.so
-
-# venv / env
-.venv/
-venv/
-env/
-ENV/
-.conda/
-*.env
-
-# Packaging / build
+*.egg-info/
+.eggs/
 build/
 dist/
-.eggs/
-*.egg-info/
-*.egg
+pip-wheel-metadata/
 
-# Tests / coverage / type checking
-.pytest_cache/
-.coverage
-.coverage.*
-htmlcov/
-.tox/
-.nox/
-.mypy_cache/
-.dmypy.json
-.pyre/
-.hypothesis/
+# --- Environnements ---
+.venv/
+venv/
+.env
+.env.*
 
-# --- Jupyter / Jupyter Book ---
+# --- Jupyter ---
 .ipynb_checkpoints/
-.jupyter/
-.jupyter_cache/
-book/_build/
-book/.jupyter_cache/
+*.nbconvert.ipynb
 
-# Si tu copies le Book dans docs/ pour le preview local
-docs/notebooks/
-
-# --- MkDocs ---
-site/
-
-# --- Editors / OS ---
+# --- OS / éditeurs ---
 .DS_Store
 Thumbs.db
-Desktop.ini
-.idea/
 .vscode/
-*.code-workspace
+.idea/
 
-# Logs & misc
-*.log
-*.tmp
-*.bak
+# --- Jupyter Book (on ne commit pas la sortie brute) ---
+book/_build/
 
-# Node (au cas où)
-node_modules/
+# --- MkDocs (build local, jamais commité) ---
+site/
+
+# --- Binder / repo2docker ---
+!.binder/
+.binder/**/__pycache__/
+
+# --- IMPORTANT ---
+# NE PAS ignorer docs/ : GitHub Pages lit depuis docs/
+# Si tu avais "docs/" dans un ancien .gitignore, supprime cette ligne.
