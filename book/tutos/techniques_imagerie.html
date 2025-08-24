@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Pipeline de traitement d’images/morphologie Python &amp; ML &#8212; BioInformatic Notebooks</title>
+    <title>Techniques d’imagerie et de microscopie en neurosciences &#8212; BioInformatic Notebooks</title>
   
   
   
@@ -57,11 +57,10 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tutos/01_notes_120825';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutos/techniques_imagerie';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Liste de base de données ouvertes" href="base_donnees_ouvertes.html" />
-    <link rel="prev" title="Notes du 12/08/25 : La méthode Lattice di-SIM" href="00_notes_120825.html" />
+    <link rel="prev" title="Créer une documentation en ligne Markdown." href="coockie_cutter.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,12 +182,11 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutos</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="00_notes_120825.html">Notes du 12/08/25 : La méthode Lattice di-SIM</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pipeline de traitement d’images/morphologie Python &amp; ML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="base_donnees_ouvertes.html">Liste de base de données ouvertes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_notes_120825.html">Pipeline de traitement d’images/morphologie Python &amp; ML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coockie_cutter.html">Créer une documentation en ligne Markdown.</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="techniques_imagerie.html">Techniques d’imagerie et de microscopie en neurosciences</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Techniques d’imagerie et de microscopie en neurosciences</a></li>
 </ul>
 
     </div>
@@ -260,7 +258,7 @@
       
       
       
-      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks/edit/master/book/tutos/01_notes_120825.md" target="_blank"
+      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks/edit/master/book/tutos/techniques_imagerie.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -277,7 +275,7 @@
       
       
       
-      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks/issues/new?title=Issue%20on%20page%20%2Ftutos/01_notes_120825.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks/issues/new?title=Issue%20on%20page%20%2Ftutos/techniques_imagerie.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -307,7 +305,7 @@
       
       
       
-      <li><a href="../_sources/tutos/01_notes_120825.md" target="_blank"
+      <li><a href="../_sources/tutos/techniques_imagerie.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -378,7 +376,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -389,11 +389,31 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Pipeline de traitement d’images/morphologie Python & ML</h1>
+    <h1>Techniques d’imagerie et de microscopie en neurosciences</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-a-fond-clair-et-contraste-de-phase">1. Microscopie à fond clair et contraste de phase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-a-fluorescence">2. Microscopie à fluorescence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-confocale-laser">3. Microscopie confocale laser</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-multiphotonique">4. Microscopie multiphotonique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-a-feuille-de-lumiere-light-sheet">5. Microscopie à feuille de lumière (Light Sheet)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-electronique-me">6. Microscopie électronique (ME)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-super-resolution">7. Microscopie super-résolution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#techniques-innovantes-et-complementaires">8. Techniques innovantes et complémentaires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imagerie-macroscopique-et-multimodale">9. Imagerie macroscopique et multimodale</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defis-et-perspectives">10. Défis et perspectives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references-utilisees">Références utilisées :</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -403,52 +423,118 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pipeline-de-traitement-dimages-morphologie-python-ml">
-<h1>Pipeline de traitement d’images/morphologie Python &amp; ML<a class="headerlink" href="#pipeline-de-traitement-dimages-morphologie-python-ml" title="Link to this heading">#</a></h1>
-<p>a) Téléchargement et organisation des données</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Récupère un jeu de SWC sur NeuroMorpho (ex : cortex, type : pyramidal ou interneurone, mutant ou contrôle).
-
-Structure le dossier (voir section précédente : /data, /src, /notebooks).
-</pre></div>
-</div>
-<p>b) Prétraîtement et normalisation spatiale</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Utilise la librairie MorphoPy ou NeuroM pour charger/analyser/visualiser chaque fichier SWC.
-
-Entraîne (ou applique) une étape de recalage spatial afin d’aligner tous les neurones sur un même repère ou landmark (ex : centre de l’hétérotopie, repère anatomique commun).
-
-    Pour cela, tu peux t’inspirer de méthodes d’enregistrement spatial tirées de l’imagerie (rigid/affine registration via numpy/scipy).
-</pre></div>
-</div>
-<p>c) Extraction automatique des features morphologiques</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Avec MorphoPy ou NeuroM, extrait : nombre de branches, longueur, diamètre, surface, répartition axones/dendrites, etc.
-
-Stocke les features sous format tabulaire (features.csv).
-</pre></div>
-</div>
-<p>d) Analyse &amp; Machine Learning (PyTorch)</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Utilise un notebook pour :
-
-    Appliquer une réduction de dimension (PCA, t-SNE) pour visualisation.
-
-    Classification automatique des morphotypes (k-means, clustering hiérarchique, ou classifieur supervisé avec PyTorch si tu as un label par exemple : mutant vs contrôle, ou par morphotype).
-
-    Ou encore apprentissage de signatures morpho-électriques en fusionnant avec d’autres features (avec PyTorch, design d’un autoencodeur ou d’un réseau simple dense).
-</pre></div>
-</div>
-<p>e) Visualisation avancée</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Produis automatiquement :
-
-    Cartes de densité ou overlays (via MorphoPy ou matplotlib).
-
-    Figure de la distribution spatiale des axones/dendrites par rapport au landmark commun.
-
-    Diagrammes de clusters/UMAP/PCA des morphotypes.
-</pre></div>
-</div>
-<p>f) Génère la documentation, la reproductibilité et package le tout pour le dépôt GitHub</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Scripts clairs, notebooks, README, metadata (desc. des fichiers, provenance, licences).
-</pre></div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="techniques-d-imagerie-et-de-microscopie-en-neurosciences">
+<h1>Techniques d’imagerie et de microscopie en neurosciences<a class="headerlink" href="#techniques-d-imagerie-et-de-microscopie-en-neurosciences" title="Link to this heading">#</a></h1>
+<p>Ce document résume les principales techniques d’imagerie et de microscopie utilisées pour l’exploration du système nerveux, en mettant l’accent sur leurs principes, applications, avantages et limites pour l’étude de la structure, de la fonction et de la dynamique neuronales.</p>
+<hr class="docutils" />
+<section id="microscopie-a-fond-clair-et-contraste-de-phase">
+<h2>1. Microscopie à fond clair et contraste de phase<a class="headerlink" href="#microscopie-a-fond-clair-et-contraste-de-phase" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Fond clair :</strong> Observation classique de coupes histologiques fixées et colorées. Limité à des échantillons fins et peu d’informations sur des structures subcellulaires dynamiques.</p></li>
+<li><p><strong>Contraste de phase/DIC :</strong> Permet d’observer des cellules vivantes sans marquage, utile pour le suivi morphologique cellulaire.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="microscopie-a-fluorescence">
+<h2>2. Microscopie à fluorescence<a class="headerlink" href="#microscopie-a-fluorescence" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Utilise des fluorophores pour révéler la distribution de molécules spécifiques.</p></li>
+<li><p>Permet la multi-coloration et l’imagerie dynamique dans des cellules et tissus vivants.</p></li>
+<li><p>Repose sur des systèmes d’excitation/emission adaptés aux marquages.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="microscopie-confocale-laser">
+<h2>3. Microscopie confocale laser<a class="headerlink" href="#microscopie-confocale-laser" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Acquisition par balayage point-par-point : améliore la résolution axiale et la section optique.</p></li>
+<li><p>Génère des reconstructions 3D d’échantillons épais (tissus cérébraux, organoïdes…).</p></li>
+<li><p>Couramment utilisée pour visualiser l’architecture neuronale et la connectivité[1][6].</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="microscopie-multiphotonique">
+<h2>4. Microscopie multiphotonique<a class="headerlink" href="#microscopie-multiphotonique" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Utilise de la lumière infrarouge pour exciter les fluorophores en profondeur (&gt;500 µm).</p></li>
+<li><p>Faible phototoxicité, imagerie in vivo ou sur tissus épais.</p></li>
+<li><p>Privilégiée pour l’étude de la physiologie neuronale chez l’animal vivant[1][6].</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="microscopie-a-feuille-de-lumiere-light-sheet">
+<h2>5. Microscopie à feuille de lumière (Light Sheet)<a class="headerlink" href="#microscopie-a-feuille-de-lumiere-light-sheet" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Illumination sélective d’une tranche mince de l’échantillon.</p></li>
+<li><p>Permet l’imagerie rapide de grands volumes, faible phototoxicité, idéale pour l’imagerie 3D d’échantillons vivants fragiles[1][6].</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="microscopie-electronique-me">
+<h2>6. Microscopie électronique (ME)<a class="headerlink" href="#microscopie-electronique-me" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Résolution nanométrique (jusqu’à l’échelle des organites et complexes synaptiques).</p></li>
+<li><p>Limite : nécessite des échantillons fixés et très fins, incompatible avec le vivant[2].</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="microscopie-super-resolution">
+<h2>7. Microscopie super-résolution<a class="headerlink" href="#microscopie-super-resolution" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Dépasse la limite de diffraction de la lumière (~250 nm) pour atteindre 20–60 nm.</p></li>
+<li><p><strong>Techniques principales :</strong></p>
+<ul>
+<li><p><strong>STORM/PALM :</strong> Localisation de molécules individuelles pour un mapping ultrastructural précis.</p></li>
+<li><p><strong>SIM, STED :</strong> Reconstruction d’images à partir de motifs d’illumination ou d’épuisement stimulé.</p></li>
+</ul>
+</li>
+<li><p>Applications : visualisation fine des synapses, du cytosquelette, du trafic vésiculaire[3][8][9].</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="techniques-innovantes-et-complementaires">
+<h2>8. Techniques innovantes et complémentaires<a class="headerlink" href="#techniques-innovantes-et-complementaires" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Imagerie SUSHI (super-resolution shadow imaging) :</strong> Révèle l’espace extracellulaire cérébral avec contraste élevé dans les tissus vivants[2].</p></li>
+<li><p><strong>Optogénétique couplée à l’imagerie :</strong> Contrôle de l’activité neuronale par la lumière pour l’étude de la connectivité et de la dynamique des réseaux[1].</p></li>
+<li><p><strong>Microscopie ultrasonore fonctionnelle (fULM) :</strong> Permet d’observer l’activité cérébrale dans tout le cerveau à résolution microscopique, basée sur le suivi du flux vasculaire via microbulles[4].</p></li>
+<li><p><strong>Optique adaptative :</strong> Compense les aberrations et améliore la performance d’imagerie profonde dans les tissus biologiques denses[5].</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="imagerie-macroscopique-et-multimodale">
+<h2>9. Imagerie macroscopique et multimodale<a class="headerlink" href="#imagerie-macroscopique-et-multimodale" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>IRM/IRMf :</strong> Imagerie non invasive in vivo de la structure et de l’activité cérébrale à l’échelle millimétrique.</p></li>
+<li><p><strong>Tomographie, imagerie moléculaire (TEP, SPECT), échographie :</strong> Recherches translationnelles et analyses de pathologies cérébrales[7].</p></li>
+<li><p><strong>Imagerie corrélative optique/ME :</strong> Associe la spécificité moléculaire de la fluorescence et la résolution de la microscopie électronique pour cartographier l’architecture neuronale complexe[9][10].</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="defis-et-perspectives">
+<h2>10. Défis et perspectives<a class="headerlink" href="#defis-et-perspectives" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Conciliation entre <strong>profondeur, résolution</strong>, <strong>vitesse d’acquisition</strong> et <strong>phototoxicité</strong> lors de l’imagerie de tissus nerveux denses ou vivants[1][6].</p></li>
+<li><p>Développement de nouvelles techniques combinant haute résolution, quantification dynamique et analyse automatisée d’images.</p></li>
+<li><p>Intégration d’approches FAIR, IA et workflows d’analyse avancés en bio-imagerie neuronale.</p></li>
+</ul>
+<hr class="docutils" />
+<section id="references-utilisees">
+<h3>Références utilisées :<a class="headerlink" href="#references-utilisees" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Leica Neurosciences [1]</p></li>
+<li><p>medecinesciences Imagerie SUSHI [2]</p></li>
+<li><p>Nikon Ressources Neurosciences / STORM [3]</p></li>
+<li><p>Inserm fULM [4]</p></li>
+<li><p>ANR Optique adaptative [5]</p></li>
+<li><p>INM Plateformes Imagerie [6]</p></li>
+<li><p>ENS Lyon Imagerie cérébrale [7]</p></li>
+<li><p>CNRS Le Journal / Super-résolution [8]</p></li>
+<li><p>FRCneurodon Super-résolution &amp; Cryo-ME [9]</p></li>
+<li><p>ICM Plateformes imagerie [10]</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -482,22 +568,13 @@ Stocke les features sous format tabulaire (features.csv).
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="00_notes_120825.html"
+       href="coockie_cutter.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Notes du 12/08/25 : La méthode Lattice di-SIM</p>
+        <p class="prev-next-title">Créer une documentation en ligne Markdown.</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="base_donnees_ouvertes.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Liste de base de données ouvertes</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -505,6 +582,33 @@ Stocke les features sous format tabulaire (features.csv).
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-a-fond-clair-et-contraste-de-phase">1. Microscopie à fond clair et contraste de phase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-a-fluorescence">2. Microscopie à fluorescence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-confocale-laser">3. Microscopie confocale laser</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-multiphotonique">4. Microscopie multiphotonique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-a-feuille-de-lumiere-light-sheet">5. Microscopie à feuille de lumière (Light Sheet)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-electronique-me">6. Microscopie électronique (ME)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopie-super-resolution">7. Microscopie super-résolution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#techniques-innovantes-et-complementaires">8. Techniques innovantes et complémentaires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imagerie-macroscopique-et-multimodale">9. Imagerie macroscopique et multimodale</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defis-et-perspectives">10. Défis et perspectives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references-utilisees">Références utilisées :</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
