@@ -18,5 +18,5 @@ nav:
       - Liste de base de données ouvertes : tutos/base_donnees_ouvertes.md
       - Creer un repo : tutos/coockie_cutter.md
       - Techniques d'imagerie : tutos/techniques_imagerie.md
-      - notebook : notebooks/index.html
+      - notebook : notebooks/_build/html/index.html
   - Notebooks (interactifs): notebooks/index.html   # sous-site Jupyter Book
