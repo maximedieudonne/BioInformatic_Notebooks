@@ -1,16 +1,10 @@
-name: neuromorpho-ml
+name: bioinfo
 channels: [conda-forge]
 dependencies:
   - python=3.11
   - ipykernel
-  - jupyterlab
-  - numpy # a tester
+  - numpy
   - pandas
-  - scikit-learn
   - matplotlib
-  - seaborn
-  - requests
-  - pip
-  - pip:
-      - myst-nb
-      - jupytext>=0.16
+  - scikit-learn
+  - jupyterlab

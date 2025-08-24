@@ -2,32 +2,17 @@
 title: BioInformatic Notebooks
 only_build_toc_files: true
 
-# (option) Laisse "off" si tu veux uniquement l'interactif via Thebe.
-# Mets "auto" si tu veux des sorties statiques au build.
-execute:
-  execute_notebooks: "auto"   # "auto" = exécute si pas d'outputs ; mets "force" pour exécuter à chaque build
-  timeout: 180
-  allow_errors: false
-
-# Indique à Jupyter Book où est ton repo (utile aux boutons & à Thebe/Binder)
 repository:
   url: https://github.com/maximedieudonne/BioInformatic_Notebooks
-  path_to_book: book
   branch: master
+  path_to_book: book
 
-# Active les boutons Binder et l'intégration Thebe
 launch_buttons:
   binderhub_url: "https://mybinder.org"
-  notebook_interface: "jupyterlab"
   thebe: true
+  notebook_interface: "jupyterlab"
 
-# Réglages de thème (boutons de header + infos du repo)
-sphinx:
-  config:
-    html_theme_options:
-      use_repository_button: true
-      use_edit_page_button: true
-      use_issues_button: true
-      repository_url: https://github.com/maximedieudonne/BioInformatic_Notebooks
-      repository_branch: master
-      path_to_docs: book
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
