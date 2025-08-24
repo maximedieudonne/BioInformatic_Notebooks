@@ -1,4 +1,14 @@
 format: jb-book
 root: index
 chapters:
-  - file: notebooks/01_demo.ipynb
+  - caption: "Notebooks"
+    sections:
+      - file: notebooks/01_demo
+  - caption: "Tutos"
+    sections:
+      - file: tutos/prise-en-main
+      - file: tutos/00_notes_120825
+      - file: tutos/01_notes_120825
+      - file: tutos/base_donnees_ouvertes
+      - file: tutos/coockie_cutter
+      - file: tutos/techniques_imagerie

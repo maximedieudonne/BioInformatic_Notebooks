@@ -1,17 +1,14 @@
 title: BioInformatic Notebooks
 author: Maxime Dieudonné
 only_build_toc_files: true
-
 repository:
   url: https://github.com/maximedieudonne/BioInformatic_Notebooks
   branch: master
   path_to_book: book
-
 launch_buttons:
   binderhub_url: "https://mybinder.org"
   thebe: true
   notebook_interface: "jupyterlab"
-
 html:
   use_repository_button: true
   use_issues_button: true
