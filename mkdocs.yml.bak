@@ -1,0 +1,22 @@
+site_name: Bio-informatics – Docs
+site_description: Démo analyse données (tutos + notebooks interactifs)
+site_url: https://maximedieudonne.github.io/BioInformatic_Notebooks/
+repo_url: https://github.com/maximedieudonne/BioInformatic_Notebooks/
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.tracking
+docs_dir: docs
+site_dir: site
+nav:
+  - Accueil: index.md
+  - Tutoriels:
+      - Prise en main: tutos/prise-en-main.md
+      - note 01 du 12 08 25 : tutos/00_notes_120825.md
+      - note 02 du 12 08 25 : tutos/01_notes_120825.md
+      - Liste de base de données ouvertes : tutos/base_donnees_ouvertes.md
+      - Creer un repo : tutos/coockie_cutter.md
+      - Techniques d'imagerie : tutos/techniques_imagerie.md
+      - notebook : notebooks/_build/html/index.html
+  - Notebooks (interactifs): notebooks/index.html   # sous-site Jupyter Book
