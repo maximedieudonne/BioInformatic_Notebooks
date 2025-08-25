@@ -8,6 +8,7 @@ parts:
 
   - caption: "Tutos"
     chapters:
+      - file: tutos/metier_bioinformaticien.md
       - file: tutos/prise-en-main
       - file: tutos/00_notes_120825
       - file: tutos/01_notes_120825
