@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Notebooks interactifs &#8212; BioInformatic Notebooks</title>
+    <title>Notes pour Bio-informaticien·nes &#8212; BioInformatic Notebooks</title>
   
   
   
@@ -170,7 +170,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Notebooks interactifs
+                    Notes pour Bio-informaticien·nes
                 </a>
             </li>
         </ul>
@@ -183,6 +183,13 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutos</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tutos/metier_bioinformaticien.html">Le métier de bio-informaticien·ne, c’est quoi ?</a></li>
+
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="tutos/00_notes_120825.html">Notes du 12/08/25 : La méthode Lattice di-SIM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutos/01_notes_120825.html">Pipeline de traitement d’images/morphologie Python &amp; ML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutos/base_donnees_ouvertes.html">Liste de base de données ouvertes</a></li>
@@ -379,7 +386,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -390,11 +399,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Notebooks interactifs</h1>
+    <h1>Notes pour Bio-informaticien·nes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Notes pour Bio-informaticien·nes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-utiliser-ce-site">Comment utiliser ce site</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ajouter-un-nouveau-contenu-checklist">Ajouter un nouveau contenu (checklist)</a><ul class="visible nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -404,9 +426,63 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="notebooks-interactifs">
-<h1>Notebooks interactifs<a class="headerlink" href="#notebooks-interactifs" title="Link to this heading">#</a></h1>
-<p>Clique sur <strong>Live Code</strong> pour exécuter les cellules dans la page (Thebe), ou <strong>Open in Binder</strong>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="notes-pour-bio-informaticiennes">
+<h1>Notes pour Bio-informaticien·nes<a class="headerlink" href="#notes-pour-bio-informaticiennes" title="Link to this heading">#</a></h1>
+<p>Cette page répertorie un ensemble de notes utiles pour les ingénieur·es et chercheur·ses.
+L’objectif est d’offrir des tutoriels, fiches pratiques et cours couvrant les principaux aspects de l’analyse de données issues du vivant, de la planification des expériences jusqu’à la mise en production et la reproductibilité.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="comment-utiliser-ce-site">
+<h1>Comment utiliser ce site<a class="headerlink" href="#comment-utiliser-ce-site" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><strong>Lire</strong> : parcourez les sections Tutos et Notebooks via le sommaire à gauche.</p></li>
+<li><p><strong>Notebook</strong> : Les notebooks sont déjà exécutés.</p></li>
+<li><p><strong>Reproduire en local (WSL/Linux)</strong> :</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># cloner</span>
+git<span class="w"> </span>clone<span class="w"> </span>&lt;votre-fork-ou-ce-repo&gt;.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>BioInformatic_Notebooks
+<span class="c1"># construire le site</span>
+jupyter-book<span class="w"> </span>build<span class="w"> </span>book
+<span class="c1"># publier localement (structure complète : CSS/JS/images)</span>
+rsync<span class="w"> </span>-a<span class="w"> </span>--delete<span class="w"> </span>book/_build/html/<span class="w"> </span>docs/
+touch<span class="w"> </span>docs/.nojekyll
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Contribuer</strong> : ouvrez une issue pour proposer un tuto, ou soumettez une pull request (PR) avec :</p>
+<ul>
+<li><p>le fichier .md (ou .ipynb) dans book/tutos/ ou book/notebooks/,</p></li>
+<li><p>l’entrée correspondante ajoutée dans book/_toc.yml,</p></li>
+<li><p>si nécessaire, la mise à jour de .binder/environment.yml.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ajouter-un-nouveau-contenu-checklist">
+<h1>Ajouter un nouveau contenu (checklist)<a class="headerlink" href="#ajouter-un-nouveau-contenu-checklist" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Fichier ajouté : book/tutos/mon-sujet.md ou book/notebooks/mon_sujet.ipynb.</p></li>
+<li><p>Sommaire mis à jour (book/_toc.yml) :</p></li>
+</ul>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parts</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Notebooks&quot;</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">notebooks/mon_sujet</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Tutos&quot;</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tutos/mon-sujet</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Dépendances ajoutées si besoin : .binder/environment.yml.</p></li>
+<li><p>Build &amp; publication :</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>clean<span class="w"> </span>--all<span class="w"> </span>book
+jupyter-book<span class="w"> </span>build<span class="w"> </span>book
+rsync<span class="w"> </span>-a<span class="w"> </span>--delete<span class="w"> </span>book/_build/html/<span class="w"> </span>docs/
+touch<span class="w"> </span>docs/.nojekyll
+git<span class="w"> </span>add<span class="w"> </span>-A<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Publier nouveau contenu&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -458,6 +534,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Notes pour Bio-informaticien·nes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-utiliser-ce-site">Comment utiliser ce site</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ajouter-un-nouveau-contenu-checklist">Ajouter un nouveau contenu (checklist)</a><ul class="visible nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
