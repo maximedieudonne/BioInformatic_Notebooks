@@ -4,11 +4,11 @@ root: index
 parts:
   - caption: "Tutos le métier bio-informaticien·ne"
     chapters:
-      - file: tutos/tuto_metier/metier_bioinformaticien.md
-      - file: tutos/tuto_metier/type_images.md
+      - file: tutos/tuto_metier/metier_bioinformaticien
+      - file: tutos/tuto_metier/type_images
       - file: tutos/tuto_metier/techniques_imagerie
       - file: tutos/tuto_metier/base_donnees_ouvertes
-      - file : tutos/tuto_metier/QC_imagerie.md
+      - file : tutos/tuto_metier/QC_imagerie
 
   - caption: "Tutos Informatique"
     chapters : 
