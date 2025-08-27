@@ -27,7 +27,7 @@ touch docs/.nojekyll
     - l’entrée correspondante ajoutée dans book/_toc.yml, 
     - si nécessaire, la mise à jour de .binder/environment.yml.
 
-# Ajouter un nouveau contenu (checklist)
+# Ajouter un nouveau contenu
 
 - Fichier ajouté : book/tutos/mon-sujet.md ou book/notebooks/mon_sujet.ipynb.
 - Sommaire mis à jour (book/_toc.yml) :
