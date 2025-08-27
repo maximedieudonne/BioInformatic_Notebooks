@@ -2,16 +2,20 @@ format: jb-book
 root: index
 
 parts:
-  - caption: "Notebooks"
-    chapters:
-      - file: notebooks/01_demo
-
-  - caption: "Tutos"
+  - caption: "Tutos le métier bio-informaticien·ne"
     chapters:
       - file: tutos/metier_bioinformaticien.md
+      - file: tutos/techniques_imagerie
+      - file: tutos/base_donnees_ouvertes
+      - file : tutos/QC_imagerie.md
       - file: tutos/prise-en-main
       - file: tutos/00_notes_120825
       - file: tutos/01_notes_120825
-      - file: tutos/base_donnees_ouvertes
+
+  - caption: "Tutos Informatique"
+    chapters : 
       - file: tutos/coockie_cutter
-      - file: tutos/techniques_imagerie
+
+  - caption: "Notebooks"
+    chapters:
+      - file: notebooks/01_demo
