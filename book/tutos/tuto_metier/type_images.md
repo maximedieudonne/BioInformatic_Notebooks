@@ -1,4 +1,4 @@
-# Les sources fréquante d'image en bio-informatique
+# Les sources fréquente d'image en bio-informatique
 
 Voici un panorama des sources fréquentes d’images en bio-informatique :
 
