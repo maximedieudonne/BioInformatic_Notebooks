@@ -44,6 +44,11 @@ parts:
 - Dépendances ajoutées si besoin : .binder/environment.yml.
 - Build & publication :
 
+
+```bash
+conda activate bioinfo
+```
+
 ```bash
 jupyter-book clean --all book
 jupyter-book build book

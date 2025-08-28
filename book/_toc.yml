@@ -2,17 +2,87 @@ format: jb-book
 root: index
 
 parts:
-  - caption: "Tutos le métier bio-informaticien·ne"
+  - caption: "Le métier de bio-informaticien·ne"
+  # Introduction générale au métier de bio-informaticien·ne
     chapters:
-      - file: tutos/tuto_metier/metier_bioinformaticien
-      - file: tutos/tuto_metier/type_images
-      - file: tutos/tuto_metier/techniques_imagerie
-      - file: tutos/tuto_metier/base_donnees_ouvertes
-      - file : tutos/tuto_metier/QC_imagerie
+      - file: tutos/00_metier/0000_metier_bioinformaticien
 
-  - caption: "Tutos Informatique"
-    chapters : 
-      - file: tutos/coockie_cutter
+  - caption: "Les données issues du vivant"
+  # Introduction sur les différentes sources d'image que peut analyser un·e bio-informaticien·ne
+    chapters:
+      - file: tutos/01_biodonnees/0100_type_images # les différentes modalités d'image
+      - file: tutos/01_biodonnees/0101_techniques_imagerie # les technologies d'acquisition des images
+      - file: tutos/01_biodonnees/0102_base_donnees_ouvertes # base de donnée disponible en téléchargement direct.
+
+  - caption: "Les routines du métier"
+  # notes: les outils numériques necessaires aux routines sont présentés dans la section suivante "outils numériques"
+    chapters: 
+      - file: tutos/02_routines/0200_principes_fair # explication des principes FAIR et de l'open science
+      - file: tutos/02_rouines/0201_bibliographie # comment faire une bibliographie -> zotero
+      - file: tutos/02_routines/0202_creation_projet # les standart CNRS pour organiser un projet -> github
+      - file: tutos/02_routines/0203_gestion_dependances # -> conda/mamba
+      - file: tutos/02_routines/0204_visualisation_données # -> napari, imageJ, 
+      - file: tutos/02_routines/0205_stockage_donnees #-> omero
+      - file: tutos/02_routines/0206_controle_qualite # explication du controle qualité 
+      - file: tutos/02_routines/0207_pipeline # mise en place d'un pipeline reproductible -> snakemake
+      - file: tutos/02_routines/0208_analyse # comment mener des analyses statistiques sur les données -> Rtudio
+      - file: tutos/02_routines/0209_rapport # redaction article -> latex/overleaf
+
+  - caption: "Les outils numériques du métier"
+  # les outils numériques à connaitre pour mener à bien les routines du métier
+    chapters:
+      - file: tutos/03a_outils_numeriques/03a01_zotero # faire une bibliographie
+      - file: tutos/03a_outils_numeriques/03a02_github # créer un dépot github
+      - file: tutos/03a_outils_numeriques/03a03_conda_mamba # gestion des dépendances d'un projet 
+      - file: tutos/03a_outils_numeriques/03a04a_imageJ
+      - file: tutos/03a_outils_numeriques/03a04b_napari
+      - file: tutos/03a_outils_numeriques/03a05_omero # stocker ces données
+      - file: tutos/03a_outils_numeriques/03a07_snakemake # créer un pipeline 
+      - file: tutos/03a_outils_numeriques/03a08_Rstudio # analyse statisique
+      - file: tutos/03a_outils_numeriques/03a09_latex # redaction article scientifique
+    
+  - caption: "Les outils numériques spécifiques à la neuro-imagerie"
+    chapters:
+      - file: tutos/03b_outils_numeriques_neuroimagerie/03b00_fmriprep
+      - file: tutos/03b_outils_numeriques_neuroimagerie/03b01_freesurfer
+      - file: tutos/03b_outils_numeriques_neuroimagerie/03b02_spm
+      - file: tutos/03b_outils_numeriques_neuroimagerie/03b03_nibabel
+      
+
+  - caption: "les packages Python utiles"
+  # présentation, prise en main rapide et commandes utiles pour les packages python utiles au traitement d'image
+    chapters:
+      - file: tutos/04_packages_python/0400_scikit-image
+      - file: tutos/04_packages_python/0401_numpy
+      - file: tutos/04_packages_python/0402_pandas
+      - file: tutos/04_packages_python/0403_matplotlib
+      - file: tutos/04_packages_python/0404_nibabel
+      - file: tutos/04_packages_python/0405_napari
+      - file: tutos/04_packages_python/0405_opencv
+
+  - caption: "Machine learning"
+  # présentation des algorythmes principaux de machine learning
+    chapters:
+      - file: tutos/05_machine_learning/0500_regression_lineaire
+      - file: tutos/05_machine_learning/0501_regression_logistique
+      - file: tutos/05_machine_learning/0502_arbre_de_decision
+      - file: tutos/05_machine_learning/0503_random_forest
+      - file: tutos/05_machine_learning/0504_kmean_clustering
+      - file: tutos/05_machine_learning/0505_knearest_neighbors
+      - file: tutos/05_machine_learning/0506_naive_bayes
+      - file: tutos/05_machine_learning/0507_suport_vector_machine
+      - file: tutos/05_machine_learning/0508_gradient_boosting
+      - file: tutos/05_machine_learning/0509_principal_component_analysis
+      - file: tutos/05_machine_learning/0510_recurent_neural_network
+      - file: tutos/05_machine_learning/0511_long_short_term_memory
+      - file: tutos/05_machine_learning/0512_gaussian_mixture_model
+      - file: tutos/05_machine_learning/0513_reinforcement_learning
+
+  - caption: "Techniques de traitement d'image"
+  # présentation des techniques de traitement d'image
+    chapters:
+      - file: tutos/06_traitement_image/0600_filtres
+      - file: tutos/06_traitement_image/0601_convolution
 
   - caption: "Notebooks"
     chapters:
