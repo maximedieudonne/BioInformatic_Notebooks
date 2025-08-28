@@ -1,0 +1,828 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>C’est quoi le QC en imagerie ? &#8212; BioInformatic Notebooks</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutos/02_routines/0206_controle_qualite';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="pipeline" href="0207_pipeline.html" />
+    <link rel="prev" title="stockage donnees" href="0205_stockage_donnees.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">BioInformatic Notebooks</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Notes pour Bio-informaticien·nes
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Le métier de bio-informaticien·ne</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../00_metier/0000_metier_bioinformaticien.html">Le métier de bio-informaticien·ne, c’est quoi ?</a></li>
+
+
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Les données issues du vivant</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_biodonnees/0100_type_images.html">Les sources fréquente d’image en bio-informatique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_biodonnees/0101_techniques_imagerie.html">Techniques d’imagerie et de microscopie en neurosciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_biodonnees/0102_base_donnees_ouvertes.html">Bases de données ouvertes utiles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Les routines du métier</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0200_principes_fair.html">Les principes Faire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0201_bibliographie.html">Constituer une bibliographie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0202_creation_projet.html">Comment créer un projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0203_gestion_dependances.html">gestion dependances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0204_visualisation_donn%C3%A9es.html">visualisation données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0205_stockage_donnees.html">stockage donnees</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">C’est quoi le QC en imagerie ?</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="0207_pipeline.html">pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0208_analyse.html">analyse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0209_rapport.html">rapport</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Les outils numériques du métier</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03a_outils_numeriques/03a01_zotero.html">zotero</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03a_outils_numeriques/03a02_github.html">github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03a_outils_numeriques/03a03_conda_mamba.html">conda mamba</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03a_outils_numeriques/03a04a_imageJ.html">imageJ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03a_outils_numeriques/03a04b_napari.html">napari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03a_outils_numeriques/03a05_omero.html">omero</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03a_outils_numeriques/03a07_snakemake.html">snakemake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03a_outils_numeriques/03a08_Rstudio.html">Rstudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03a_outils_numeriques/03a09_latex.html">latex</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Les outils numériques spécifiques à la neuro-imagerie</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03b_outils_numeriques_neuroimagerie/03b00_fmriprep.html">fmriprep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03b_outils_numeriques_neuroimagerie/03b01_freesurfer.html">freesurfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03b_outils_numeriques_neuroimagerie/03b02_spm.html">spm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03b_outils_numeriques_neuroimagerie/03b03_nibabel.html">nibabel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">les packages Python utiles</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../04_packages_python/0400_scikit-image.html">scikit-image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_packages_python/0401_numpy.html">numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_packages_python/0402_pandas.html">pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_packages_python/0403_matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_packages_python/0404_nibabel.html">nibabel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_packages_python/0405_napari.html">napari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_packages_python/0405_opencv.html">opencv</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0500_regression_lineaire.html">regression lineaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0501_regression_logistique.html">regression logistique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0502_arbre_de_decision.html">arbre de decision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0503_random_forest.html">random forest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0504_kmean_clustering.html">kmean clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0505_knearest_neighbors.html">knearest neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0506_naive_bayes.html">naive bayes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0507_suport_vector_machine.html">suport vector machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0508_gradient_boosting.html">gradient boosting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0509_principal_component_analysis.html">principal component analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0510_recurent_neural_network.html">recurent neural network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0511_long_short_term_memory.html">long short term memory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0512_gaussian_mixture_model.html">gaussian mixture model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_machine_learning/0513_reinforcement_learning.html">reinforcement learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Techniques de traitement d'image</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../06_traitement_image/0600_filtres.html">filtres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06_traitement_image/0601_convolution.html">convolution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebooks</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/01_demo.html">01_demo — Notebook de test</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks/edit/master/book/tutos/02_routines/0206_controle_qualite.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks/issues/new?title=Issue%20on%20page%20%2Ftutos/02_routines/0206_controle_qualite.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/tutos/02_routines/0206_controle_qualite.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>C’est quoi le QC en imagerie ?</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">C’est quoi le QC en imagerie ?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#les-6-niveaux-de-qc-en-imagerie">Les 6 niveaux de QC en imagerie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mesures-cles-et-reperes-pratiques">Mesures clés et repères pratiques</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#artefacts-courants-remedes-rapides">Artefacts courants &amp; remèdes rapides</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-tracabilite-fair">Documentation &amp; traçabilité (FAIR)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#routine-qc-planning-realiste">Routine QC (planning réaliste)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#regles-go-no-go-exemples">Règles “GO/NO-GO” (exemples)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-que-produit-un-bon-qc-livrables">Ce que produit un bon QC (livrables)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pour-chaque-modalite-les-bonnes-pratiques-regroupent">Pour chaque modalité, les bonnes pratiques regroupent :</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cest-quoi-le-qc-en-imagerie">
+<h1>C’est quoi le QC en imagerie ?<a class="headerlink" href="#cest-quoi-le-qc-en-imagerie" title="Link to this heading">#</a></h1>
+<p>Le QC (Quality Control), c’est l’ensemble des vérifications systématiques qui garantissent que :</p>
+<ul class="simple">
+<li><p>l’image acquise représente fidèlement l’échantillon,</p></li>
+<li><p>les artefacts sont maîtrisés (ou documentés),</p></li>
+<li><p>les étapes d’analyse (prétraitements, segmentation, tracking, ML) produisent des résultats fiables et reproductibles.</p></li>
+</ul>
+<p>L’idée : détecter tôt un problème (microscope, acquisition, données, algorithmes) pour corriger ou stopper avant de tirer des conclusions biologiques fausses.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="les-6-niveaux-de-qc-en-imagerie">
+<h1>Les 6 niveaux de QC en imagerie<a class="headerlink" href="#les-6-niveaux-de-qc-en-imagerie" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>QC matériel / plateforme</p></li>
+</ol>
+<p>Vérifie que le système optique et la chaîne de détection fonctionnent dans les spécifications.</p>
+<p>Exemples : PSF, résolution, uniformité d’illumination, registration inter-canaux, stabilité mécanique (drift), calibration d’échelle (µm/pixel), linéarité du capteur.</p>
+<ol class="arabic simple" start="2">
+<li><p>QC à l’acquisition</p></li>
+</ol>
+<p>Ce que tu règles au moment de la prise d’image pour éviter l’irrécupérable.</p>
+<p>Exemples : exposition (éviter la saturation), focus, échantillonnage conforme à Nyquist, z-step cohérent, durée d’acquisition vs photoblanchiment.</p>
+<ol class="arabic simple" start="3">
+<li><p>QC des données (fichiers)</p></li>
+</ol>
+<p>Intégrité et métadonnées complètes.</p>
+<p>Exemples : format OME-TIFF/NGFF, tailles cohérentes (X/Y/Z/C/T), pixel size présent, horodatages, LUTs standards, contrôle d’orientation/axes.</p>
+<ol class="arabic simple" start="4">
+<li><p>QC des prétraitements</p></li>
+</ol>
+<p>Tu corriges ce qui est systématique mais réversible.</p>
+<p>Exemples : flat-field / shading (illumination inhomogène), soustraction du fond, dénoyautage (sans baver sur les bords), déconvolution (PSF mesurée/théorique), registration multi-canaux.</p>
+<ol class="arabic simple" start="5">
+<li><p>QC de la segmentation / features</p></li>
+</ol>
+<p>Vérifie que les objets détectés correspondent à la réalité biologique et aux annotations.</p>
+<p>Exemples : métriques pixel (IoU/Dice), objet (F1 objets, erreurs de comptage), distributions de taille/forme plausibles, erreurs typiques (sous-segmentation, sur-segmentation, fusion, trous).</p>
+<ol class="arabic simple" start="6">
+<li><p>QC du tracking / modèles ML</p></li>
+</ol>
+<p>Vérifie la cohérence temporelle (trajectoires, identités) et la validité des modèles (pas de fuites de données, calibration).</p>
+<p>Exemples : tracking (ID switches, longévité des pistes), ML (split train/val/test, AUC/F1, calibration (ECE), généralisation sur lots/jours différents).</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mesures-cles-et-reperes-pratiques">
+<h1>Mesures clés et repères pratiques<a class="headerlink" href="#mesures-cles-et-reperes-pratiques" title="Link to this heading">#</a></h1>
+<p>Repères = ordres de grandeur usuels, à adapter par modalité (widefield, confocal, spinning, light-sheet) et objectif/NA.</p>
+<ol class="arabic simple">
+<li><p><strong>Matériel</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>PSF / Résolution : largeur latérale proche des valeurs attendues ; z plus large que xy (normal).</p></li>
+<li><p>Uniformité d’illumination : coefficient de variation (CV) du fond &lt; 10–15% (après correction, résiduel &lt; ~2–5%).</p></li>
+<li><p>Registration inter-canaux : &lt; 0,5 pixel de décalage (perles multicanaux).</p></li>
+<li><p>Drift : &lt; 1 pixel/min (ou corrigé numériquement si constant).</p></li>
+<li><p>Calibration : µm/pixel cohérent avec objectif + taille pixel caméra.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>Acquisition</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Saturation : viser &lt; 1% de pixels saturés ; dynamique explorée sans écrêtage.</p></li>
+<li><p>SNR : suffisant pour que le segmenteur sépare fond/objet (à estimer avec une mesure simple type Tenengrad/variance locale).</p></li>
+<li><p>Nyquist : échantillonner à ≥ 2–3 pixels par plus petit détail (xy) ; z-step ≈ 0,5–1× résolution axiale.</p></li>
+<li><p>Photoblanchiment : pente d’intensité vs temps faible et stable.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p><strong>Données</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>OME/REMBI : métadonnées présentes (échelles X/Y/Z, temps, canaux, intensités).</p></li>
+<li><p>Intégrité : hash/empreinte si gros volumes, absence de corruption/axes inversés.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p><strong>Prétraitements</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Flat-field : vignettage corrigé (profil plat ± quelques %).</p></li>
+<li><p>Denoising : sans élargir les objets ; contrôle par profils de bords.</p></li>
+<li><p>Déconvolution : amélioration du contraste sans halos/artéfacts ; PSF documentée.</p></li>
+<li><p>Registration : décalage résiduel &lt; 0,5 pixel si colocalisation.</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p><strong>Segmentation / Features</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Pixel : Dice/IoU élevés (p.ex. Dice ≥ 0,8 sur un échantillon annoté).</p></li>
+<li><p>Objet : F1 objet élevé ; erreurs de fusion/scission documentées.</p></li>
+<li><p>Features : distributions (aire, circularité) plausibles et stables par lot.</p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p><strong>Tracking / ML</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Tracking : peu d’ID switches, pistes longues et continues ; métriques type DET/TRA en vert sur un sous-ensemble.</p></li>
+<li><p>ML : séparation claire train/val/test, aucune fuite ; métriques (F1/PR-AUC) stables en validation croisée ; calibration correcte (ECE bas).</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="artefacts-courants-remedes-rapides">
+<h1>Artefacts courants &amp; remèdes rapides<a class="headerlink" href="#artefacts-courants-remedes-rapides" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Vignettage / gradients → flat-field (BaSiC/CIDRE), illumination Köhler.</p></li>
+<li><p>Bruit / grain → débruitage modéré (NL-means/Wavelets), binning au besoin.</p></li>
+<li><p>Saturation / bande dynamique → ajuster gain/expo ; HDR si nécessaire.</p></li>
+<li><p>Aberrations chromatiques → registration par perles multicanaux.</p></li>
+<li><p>Drift / jitter → correction post-hoc (phase correlation), stabilisation mécanique.</p></li>
+<li><p>Rolling-shutter / banding → paramètres caméra, temps d’expo plus long, correction logicielle.</p></li>
+<li><p>Z-step erroné → recalibrer l’axe z ; vérifier le fichier de commande.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="documentation-tracabilite-fair">
+<h1>Documentation &amp; traçabilité (FAIR)<a class="headerlink" href="#documentation-tracabilite-fair" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Métadonnées : microscope, objectif/NA, taille pixel, lasers/longueurs d’onde, filtres, temps d’expo, gain, dates, opérateur, échantillon, conditions.</p></li>
+<li><p>Versions : logiciels/plug-ins, paramètres de prétraitement, scripts.</p></li>
+<li><p>Contrôles : images de perles, lames de test, rapports QC (PDF/HTML).</p></li>
+<li><p>Données : formats ouverts (OME-TIFF / OME-NGFF), organisation claire (Plate/Well/Field/Time).</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="routine-qc-planning-realiste">
+<h1>Routine QC (planning réaliste)<a class="headerlink" href="#routine-qc-planning-realiste" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>À chaque acquisition : check rapide (saturation, focus, drift, uniformité visible), note d’expo/gain, mini-rapport.</p></li>
+<li><p>Hebdo : PSF, uniformité, registration multicanaux (perles), rapport standardisé.</p></li>
+<li><p>Projet : QC de prétraitement + échantillons annotés pour valider segmentation/tracking, critères GO/NO-GO.</p></li>
+<li><p>Publication : annexe QC (métadonnées, PSF, uniformité, exemples d’artefacts + corrections, métriques de seg/tracking/ML sur vérité terrain).</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="regles-go-no-go-exemples">
+<h1>Règles “GO/NO-GO” (exemples)<a class="headerlink" href="#regles-go-no-go-exemples" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Saturation massive, métadonnées manquantes, z-step faux → NO-GO (reprise acquisition).</p></li>
+<li><p>Uniformité dégradée mais corrigeable, faible drift, bruit modéré → GO avec correction documentée.</p></li>
+<li><p>Segmentation instable (Dice &lt; 0,7), tracking avec nombreux ID switches → stop analyse, revoir prétraitement/modèle/paramètres ; constituer un set d’annotations plus solide.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ce-que-produit-un-bon-qc-livrables">
+<h1>Ce que produit un bon QC (livrables)<a class="headerlink" href="#ce-que-produit-un-bon-qc-livrables" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Rapport QC (HTML/PDF) : PSF, uniformité, saturation, drift, exemples avant/après correction, métriques de seg/tracking/ML.</p></li>
+<li><p>Jeu d’images de référence (perles, lames tests) + paramètres d’acquisition.</p></li>
+<li><p>Échantillons annotés (vérité terrain) pour valider segmentation/tracking.</p></li>
+<li><p>Scripts/Notebooks versionnés + fichiers YAML des paramètres.</p></li>
+</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type d’image</p></th>
+<th class="head"><p>Contrôles qualité spécifiques</p></th>
+<th class="head"><p>Exemples de protocoles QC</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Microscopie (optiques)</strong></p></td>
+<td><p>Vérif. PSF, uniformité d’illumination, calibration, drift, artefacts optiques, SNR, contrôle saturation, flat-field, métadonnées complètes</p></td>
+<td><p>Images de billes (PSF), contrôle régulier de l’uniformité avec lames fluorescentes, vérification focus manuel/auto, script FIJI pour détecter la saturation, calcul du SNR sur fond/cellules</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Microscopie électronique (MEB/MET)</strong></p></td>
+<td><p>Résolution nanométrique, étalonnage échelle, contrôle bruit/fond, vérif. d’artefacts de préparation (cryo, coloration), intégrité des champs</p></td>
+<td><p>Images d’étalons nanométriques, vérification du contraste, annotation de la morphologie des objets, contrôle absence de zones brûlées/ombres</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>IRM/IRMf</strong></p></td>
+<td><p>Contrôle distorsion géométrique, uniformité du champ magnétique, bruit thermique, calibrations spatiales, absence d’artefacts de mouvement, SNR, intégrité DICOM</p></td>
+<td><p>Fantômes de calibration (géométrie/homogénéité), rapport d’absence d’artefacts de mouvement (qualité patient/acquisition), vérification DICOM/métadonnées</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>TEP/TEP-CT</strong></p></td>
+<td><p>Correct. du bruit de fond, cohérence temporelle, co-registration avec CT, uniformité détecteurs, contrôle de radioactivité, calibrations 3D</p></td>
+<td><p>Suivi de la co-registration sur images fusionnées, vérif. d’uniformité sur la série, calibration radioactivité vs référents, script d’analyse du bruit de fond par coupe</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Scanner CT/X</strong></p></td>
+<td><p>Uniformité densité Hounsfield, calibrat. spatiale, contrôles de bruit, artefacts (métal, mouvement), résolution, intégrité DICOM</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Échographie</strong></p></td>
+<td><p>Vérification résolution axiale/latérale, calibrat. échelle, contrôle artefacts (ombres, bruit speckle), intégrité temporelle, SNR</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Histologie numérisée</strong></p></td>
+<td><p>Uniformité scan, calibrat. couleur, fidélité spatiale, contrôle tilt/rotation, intégrité fichiers, métadonnées (objectif, tranche, teinture)</p></td>
+<td><p>Analyse comparée de la colorimétrie sur différents scanners, script d’alignement/rotation, contrôle manuel sur région témoin</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Cytométrie / High-content screening</strong></p></td>
+<td><p>Vérif. uniformité champs, calibrat. intensité/canal, SNR, absence de saturation, intégrité des fichiers, vérif. segmentation/annotation automatique</p></td>
+<td><p>QC automatique : histogrammes d’intensité, taux d’objets détectés/ratés, contrôle d’intégrité des fichiers batch issus du système</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="pour-chaque-modalite-les-bonnes-pratiques-regroupent">
+<h1>Pour chaque modalité, les bonnes pratiques regroupent :<a class="headerlink" href="#pour-chaque-modalite-les-bonnes-pratiques-regroupent" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Contrôle physique/métrologique régulier (soit via étalon, soit via phantom, soit via objet de référence)</p></li>
+<li><p>Validation de l’intégrité des fichiers et des métadonnées</p></li>
+<li><p>Test d’artefacts et vérification de la reproductibilité par lots/plateformes.</p></li>
+</ul>
+<p>La mise en place de workflows QC automatisés (via scripts Python, FIJI, plugins spécialisés) est répandue pour garantir la robustesse de l’analyse bio-informatique.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maximedieudonne/BioInformatic_Notebooks",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tutos/02_routines"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="0205_stockage_donnees.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">stockage donnees</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="0207_pipeline.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">pipeline</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">C’est quoi le QC en imagerie ?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#les-6-niveaux-de-qc-en-imagerie">Les 6 niveaux de QC en imagerie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mesures-cles-et-reperes-pratiques">Mesures clés et repères pratiques</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#artefacts-courants-remedes-rapides">Artefacts courants &amp; remèdes rapides</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-tracabilite-fair">Documentation &amp; traçabilité (FAIR)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#routine-qc-planning-realiste">Routine QC (planning réaliste)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#regles-go-no-go-exemples">Règles “GO/NO-GO” (exemples)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-que-produit-un-bon-qc-livrables">Ce que produit un bon QC (livrables)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pour-chaque-modalite-les-bonnes-pratiques-regroupent">Pour chaque modalité, les bonnes pratiques regroupent :</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Maxime Dieudonné
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -581,6 +581,8 @@ touch docs/.nojekyll
 <li>Dépendances ajoutées si besoin : .binder/environment.yml.</li>
 <li>Build &amp; publication :</li>
 </ul>
+<pre><code class="language-bash">conda activate bioinfo
+</code></pre>
 <pre><code class="language-bash">jupyter-book clean --all book
 jupyter-book build book
 rsync -a --delete book/_build/html/ docs/
