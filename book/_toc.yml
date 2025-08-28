@@ -18,7 +18,7 @@ parts:
   # notes: les outils numériques necessaires aux routines sont présentés dans la section suivante "outils numériques"
     chapters: 
       - file: tutos/02_routines/0200_principes_fair # explication des principes FAIR et de l'open science
-      - file: tutos/02_rouines/0201_bibliographie # comment faire une bibliographie -> zotero
+      - file: tutos/02_routines/0201_bibliographie # comment faire une bibliographie -> zotero
       - file: tutos/02_routines/0202_creation_projet # les standart CNRS pour organiser un projet -> github
       - file: tutos/02_routines/0203_gestion_dependances # -> conda/mamba
       - file: tutos/02_routines/0204_visualisation_données # -> napari, imageJ, 
