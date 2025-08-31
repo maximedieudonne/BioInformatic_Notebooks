@@ -4,6 +4,11 @@
 Ce document répertorie des bases de données ouvertes disponibles en téléchargement, utiles pour s'entrainer à l'analyse d'image propres au métier de bio-informaticien·ne.
 Les bases de données sont classées selon le type d'image.
 
+
+## Segmentation cellulaire : 
+
+[CellPose](https://www.cellpose.org/dataset)
+
 ## Microcopie optique
 
 ### IDR (Image Data Ressource)
