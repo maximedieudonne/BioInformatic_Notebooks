@@ -47,7 +47,11 @@ parts:
       - file: tutos/03b_outils_numeriques_neuroimagerie/03b01_freesurfer
       - file: tutos/03b_outils_numeriques_neuroimagerie/03b02_spm
       - file: tutos/03b_outils_numeriques_neuroimagerie/03b03_nibabel
-      
+
+  - caption: "State of the Art. Veille technologique"
+    chapters:
+      - file: tutos/03c_state_of_the_art/03c00_segmentation_cellule_startdist
+      - file: tutos/03c_state_of_the_art/03c01_segmentation_cellule_cellpose
 
   - caption: "les packages Python utiles"
   # présentation, prise en main rapide et commandes utiles pour les packages python utiles au traitement d'image

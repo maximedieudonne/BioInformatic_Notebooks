@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>nibabel &#8212; BioInformatic Notebooks</title>
+    <title>Segmentation d’image de cellule avec StartDist &#8212; BioInformatic Notebooks</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tutos/03b_outils_numeriques_neuroimagerie/03b03_nibabel';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutos/03c_state_of_the_art/03c00_segmentation_cellule_startdist';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Segmentation d’image de cellule avec StartDist" href="../03c_state_of_the_art/03c00_segmentation_cellule_startdist.html" />
-    <link rel="prev" title="spm" href="03b02_spm.html" />
+    <link rel="next" title="Segmentation d’image de cellule avec CellPose" href="03c01_segmentation_cellule_cellpose.html" />
+    <link rel="prev" title="nibabel" href="../03b_outils_numeriques_neuroimagerie/03b03_nibabel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -223,16 +223,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../03a_outils_numeriques/03a09_latex.html">latex</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Les outils numériques spécifiques à la neuro-imagerie</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="03b00_fmriprep.html">fmriprep</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03b01_freesurfer.html">freesurfer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03b02_spm.html">spm</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">nibabel</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03b_outils_numeriques_neuroimagerie/03b00_fmriprep.html">fmriprep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03b_outils_numeriques_neuroimagerie/03b01_freesurfer.html">freesurfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03b_outils_numeriques_neuroimagerie/03b02_spm.html">spm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03b_outils_numeriques_neuroimagerie/03b03_nibabel.html">nibabel</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">State of the Art. Veille technologique</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../03c_state_of_the_art/03c00_segmentation_cellule_startdist.html">Segmentation d’image de cellule avec StartDist</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../03c_state_of_the_art/03c01_segmentation_cellule_cellpose.html">Segmentation d’image de cellule avec CellPose</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Segmentation d’image de cellule avec StartDist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03c01_segmentation_cellule_cellpose.html">Segmentation d’image de cellule avec CellPose</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">les packages Python utiles</span></p>
 <ul class="nav bd-sidenav">
@@ -343,7 +343,7 @@
       
       
       
-      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks/edit/master/book/tutos/03b_outils_numeriques_neuroimagerie/03b03_nibabel.md" target="_blank"
+      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks/edit/master/book/tutos/03c_state_of_the_art/03c00_segmentation_cellule_startdist.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -360,7 +360,7 @@
       
       
       
-      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks/issues/new?title=Issue%20on%20page%20%2Ftutos/03b_outils_numeriques_neuroimagerie/03b03_nibabel.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/maximedieudonne/BioInformatic_Notebooks/issues/new?title=Issue%20on%20page%20%2Ftutos/03c_state_of_the_art/03c00_segmentation_cellule_startdist.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -390,7 +390,7 @@
       
       
       
-      <li><a href="../../_sources/tutos/03b_outils_numeriques_neuroimagerie/03b03_nibabel.md" target="_blank"
+      <li><a href="../../_sources/tutos/03c_state_of_the_art/03c00_segmentation_cellule_startdist.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -472,7 +472,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>nibabel</h1>
+    <h1>Segmentation d’image de cellule avec StartDist</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -486,9 +486,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="nibabel">
-<h1>nibabel<a class="headerlink" href="#nibabel" title="Link to this heading">#</a></h1>
-<p><em>TODO: contenu à écrire.</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="segmentation-d-image-de-cellule-avec-startdist">
+<h1>Segmentation d’image de cellule avec StartDist<a class="headerlink" href="#segmentation-d-image-de-cellule-avec-startdist" title="Link to this heading">#</a></h1>
+<p>Réference :</p>
+<ul class="simple">
+<li><p>Schmidt, U., Weigert, M., Broaddus, C. &amp; Myers, G. Cell Detection with Star-Convex Polygons. in Medical Image Computing and Computer Assisted Intervention – MICCAI 2018 (eds. Frangi, A. F., Schnabel, J. A., Davatzikos, C., Alberola-López, C. &amp; Fichtinger, G.) 265–273 (Springer International Publishing, Cham, 2018). doi:10.1007/978-3-030-00934-2_30.</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -504,7 +507,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./tutos/03b_outils_numeriques_neuroimagerie"
+            path: "./tutos/03c_state_of_the_art"
         },
         predefinedOutput: true
     }
@@ -522,20 +525,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="03b02_spm.html"
+       href="../03b_outils_numeriques_neuroimagerie/03b03_nibabel.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">spm</p>
+        <p class="prev-next-title">nibabel</p>
       </div>
     </a>
     <a class="right-next"
-       href="../03c_state_of_the_art/03c00_segmentation_cellule_startdist.html"
+       href="03c01_segmentation_cellule_cellpose.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Segmentation d’image de cellule avec StartDist</p>
+        <p class="prev-next-title">Segmentation d’image de cellule avec CellPose</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
