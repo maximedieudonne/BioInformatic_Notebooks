@@ -1,4 +1,4 @@
-# C’est quoi le QC en imagerie ?
+# Controle qualite# C’est quoi le QC en imagerie ?
 
 Le QC (Quality Control), c’est l’ensemble des vérifications systématiques qui garantissent que :
 

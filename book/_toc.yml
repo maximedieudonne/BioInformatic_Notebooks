@@ -10,23 +10,68 @@ parts:
   - caption: "Les données issues du vivant"
   # Introduction sur les différentes sources d'image que peut analyser un·e bio-informaticien·ne
     chapters:
-      - file: tutos/01_biodonnees/0100_type_images # les différentes modalités d'image
-      - file: tutos/01_biodonnees/0101_techniques_imagerie # les technologies d'acquisition des images
-      - file: tutos/01_biodonnees/0102_base_donnees_ouvertes # base de donnée disponible en téléchargement direct.
+      - file: tutos/00b_biodonnees/00b00_type_images # les différentes modalités d'image
+      - file: tutos/00b_biodonnees/00b01_techniques_imagerie # les technologies d'acquisition des images
+      - file: tutos/00b_biodonnees/00b02_base_donnees_ouvertes # base de donnée disponible en téléchargement direct.
 
-  - caption: "Les routines du métier"
-  # notes: les outils numériques necessaires aux routines sont présentés dans la section suivante "outils numériques"
-    chapters: 
-      - file: tutos/02_routines/0200_principes_fair # explication des principes FAIR et de l'open science
-      - file: tutos/02_routines/0201_bibliographie # comment faire une bibliographie -> zotero
-      - file: tutos/02_routines/0202_creation_projet # les standart CNRS pour organiser un projet -> github
-      - file: tutos/02_routines/0203_gestion_dependances # -> conda/mamba
-      - file: tutos/02_routines/0204_visualisation_données # -> napari, imageJ, 
-      - file: tutos/02_routines/0205_stockage_donnees #-> omero
-      - file: tutos/02_routines/0206_controle_qualite # explication du controle qualité 
-      - file: tutos/02_routines/0207_pipeline # mise en place d'un pipeline reproductible -> snakemake
-      - file: tutos/02_routines/0208_analyse # comment mener des analyses statistiques sur les données -> Rtudio
-      - file: tutos/02_routines/0209_rapport # redaction article -> latex/overleaf
+  - caption: "La science ouverte"
+  # Comprendre les enjeux de la science ouverte et comment cela s'applique aux routines métier
+    chapters:
+      - file: tutos/01_science_ouverte/0100_appliquer_principes_fair
+
+
+  - caption: "Les routines de gestion de projet"
+  # présentation des techniques de traitement d'image
+    chapters:
+      - file: tutos/02a_routines_gestion_projet/02a00_planifier_projet 
+      - file: tutos/02a_routines_gestion_projet/02a01_rediger_bibliographie # comment faire une bibliographie -> zotero
+  
+  - caption: "Les routines d'acquisition et de stockage des données"
+  # présentation des techniques de traitement d'image
+    chapters:
+      - file: tutos/02b_routines_acquisition_donnee/02b00_telechargement_massif_images
+      - file: tutos/02b_routines_acquisition_donnee/02b01_organisation_metadonnees
+      - file: tutos/02b_routines_acquisition_donnee/02b02_mise_en_place_base_structuree
+      - file: tutos/02b_routines_acquisition_donnee/02b03_stockage_donnees_omero #-> omero
+
+  - caption: "Les routines dd prétraitement et de controle qualité"
+  # présentation des techniques de traitement d'image
+    chapters:
+      - file: tutos/02c_routines_pretraitement_controle_qualite/02c00_controle_qualite # explication du controle qualité 
+      - file: tutos/02c_routines_pretraitement_controle_qualite/02c01_verifier_intégrite_fichiers
+      - file: tutos/02c_routines_pretraitement_controle_qualite/02c02_normaliser_formats
+      - file: tutos/02c_routines_pretraitement_controle_qualite/02c03_construire_pipelines_annotation_labellisation
+
+  - caption: "Les routines d'analyse"
+  # présentation des techniques de traitement d'image
+    chapters:
+      - file: tutos/02d_routines_analyse/02d00_analyse # comment mener des analyses statistiques sur les données -> Rtudio
+      - file: tutos/02d_routines_analyse/02d01_segmenter_image_cellule
+      - file: tutos/02d_routines_analyse/02d02_visualisation_donnees # -> napari, imageJ, 
+
+
+  - caption: "Les routines de gestion du code"
+  # présentation des techniques de traitement d'image
+    chapters:
+      - file: tutos/02e_routines_gestion_code/02c00_creation_projet # les standart CNRS pour organiser un projet -> github
+      - file: tutos/02e_routines_gestion_code/02c01_gestion_dependances # -> conda/mamba
+      - file: tutos/02e_routines_gestion_code/02c02_fonctions_test # -> conda/mamba
+      - file: tutos/02e_routines_gestion_code/02c03_creer_un_pipeline # mise en place d'un pipeline reproductible -> snakemake
+      - file: tutos/02e_routines_gestion_code/02c04_integrer_paquet_pipeline
+
+  - caption: "Les routines de déploiment et distribution du code"
+    chapters:
+      - file: tutos/02f_routines_deploiment/02f00_creer_paquet_bioinfo
+      - file: tutos/02f_routines_deploiment/02f01_conteneurisation # (Docker/Singularity).
+      - file: tutos/02f_routines_deploiment/02f02_deploiement_cluster_HPC
+
+  - caption: "Les routines de reporting et valorisation"
+    chapters:
+      - file: tutos/02g_routines_reporting/02g00_generer_rapports_automatises # (R Markdown, Jupyter Book).
+      - file: tutos/02g_routines_reporting/02g01_produire_figures_tableaux_metriques
+      - file: tutos/02g_routines_reporting/02g02_preparer_depots #(Zenodo, GitHub, bioimage archives).
+
+
 
   - caption: "Les outils numériques du métier"
   # les outils numériques à connaitre pour mener à bien les routines du métier
@@ -87,6 +132,13 @@ parts:
     chapters:
       - file: tutos/06_traitement_image/0600_filtres
       - file: tutos/06_traitement_image/0601_convolution
+
+  - caption: "Glossaire"
+  # présentation des techniques de traitement d'image
+    chapters:
+      - file: tutos/08_glossaire/0800_glossaire_informatique
+      - file: tutos/08_glossaire/0801_glossaire_biologie
+
 
   - caption: "Notebooks"
     chapters:
