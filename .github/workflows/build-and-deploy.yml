@@ -23,18 +23,6 @@ jobs:
         run: |
           pip install mkdocs-material jupyter-book ghp-import
 
-      - name: Build MkDocs
-        run: mkdocs build --clean
-
-      - name: Build Jupyter Book
-        run: jupyter-book build book
-
-      - name: Merge Book into MkDocs site
-        run: |
-          mkdir -p site/notebooks
-          rsync -av --delete book/_build/html/ site/notebooks/
-          touch site/.nojekyll
-
       - name: Configure git for push
         run: |
           git config user.name "${{ github.actor }}"
