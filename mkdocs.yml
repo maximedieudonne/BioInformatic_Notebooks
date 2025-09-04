@@ -20,3 +20,16 @@ nav:
       - Techniques d'imagerie : tutos/techniques_imagerie.md
   - Notebooks:
       - Demo: notebooks/01_demo.html
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+
+plugins:
+  - search
+  - mkdocs-jupyter    # si tu l’utilises déjà pour les notebooks
+
+extra_css:
+  - stylesheets/callouts.css

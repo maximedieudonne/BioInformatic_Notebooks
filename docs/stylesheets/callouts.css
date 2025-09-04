@@ -1,0 +1,42 @@
+/* --- Encadrés perso compatibles Material + notebooks --- */
+
+/* Couleurs/icônes (change-les à ta guise) */
+:root{
+  --def-border:#0b74de; --def-bg:#eaf4ff; --def-ico:"📘";
+  --lab-border:#7e3aed; --lab-bg:#f3e8ff; --lab-ico:"🧪";
+  --rem-border:#0f8a5f; --rem-bg:#e8f8ef; --rem-ico:"🔔";
+}
+
+/* 1) Pages .md — types custom Material: .admonition.TYPE */
+.md-typeset .admonition.definition,
+.md-typeset details.definition { border-color: var(--def-border); }
+.md-typeset .definition > .admonition-title,
+.md-typeset details.definition > summary { background: var(--def-bg); }
+.md-typeset .definition > .admonition-title::before,
+.md-typeset details.definition > summary::before { content: var(--def-ico); }
+
+.md-typeset .admonition.labtip,
+.md-typeset details.labtip { border-color: var(--lab-border); }
+.md-typeset .labtip > .admonition-title,
+.md-typeset details.labtip > summary { background: var(--lab-bg); }
+.md-typeset .labtip > .admonition-title::before,
+.md-typeset details.labtip > summary::before { content: var(--lab-ico); }
+
+.md-typeset .admonition.reminder,
+.md-typeset details.reminder { border-color: var(--rem-border); }
+.md-typeset .reminder > .admonition-title,
+.md-typeset details.reminder > summary { background: var(--rem-bg); }
+.md-typeset .reminder > .admonition-title::before,
+.md-typeset details.reminder > summary::before { content: var(--rem-ico); }
+
+/* 2) Notebooks .ipynb — mini-HTML générique : <div class="callout TYPE" data-title="..."> */
+.md-typeset .callout{
+  border-left:.3rem solid; padding:.75rem 1rem; margin:1rem 0;
+  border-radius:.375rem; background:#f8f9fb;
+}
+.md-typeset .callout::before{
+  content: attr(data-title); font-weight:700; display:block; margin-bottom:.25rem;
+}
+.md-typeset .callout.definition{ border-left-color:var(--def-border); background:var(--def-bg); }
+.md-typeset .callout.labtip{ border-left-color:var(--lab-border); background:var(--lab-bg); }
+.md-typeset .callout.reminder{ border-left-color:var(--rem-border); background:var(--rem-bg); }
