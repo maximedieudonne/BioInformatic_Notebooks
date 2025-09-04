@@ -36,22 +36,29 @@ Par exemple, un script écrit sur un Mac peut être exécuté sur un PC, ce qui 
 
 Python est un language de programmation intéprété.
 
-> [!NOTE]
-> Il existe deux grandes familles de langages de programmation :
-> 1. Langages Compilés :
->     - Exemples : C++, C#, Cobol
->     - Fonctionnement : Lorsque l'on écrit du code avec un langage compilé, il faut d'abord le compiler pour pouvoir l'exécuter
->     Cette compilation transforme le code en langage machine pour en faire un exécutable
->     - Inconvénient : Pour un gros programme, la compilation peut prendre un certain temps
->     - Avantage : Le programme généré est rapide à s'exécuter
+!!! definition "Définition de la programmation"
+    Programmer consiste à écrire des instructions pour un ordinateur…
 
-> 2. Langages Interprétés :
->     - Exemples : Perl, SQL, et notre Python
->     - Fonctionnement : Quand on écrit du code, celui-ci est lu par un interpréteur, un logiciel qui lit le script pour l'exécuter
->     - Avantage : Il n'y a pas de temps perdu à la compilation
->     - Inconvénient : C'est un peu plus lent à l'exécution
+!!! labtip "Astuce labo"
+    Crée un environnement conda par projet.
 
-> Cas hybride : Certains langages, comme Java, sont entre les deux, car ils sont compilés non pas pour créer un exécutable direct, mais pour être lancés dans une > machine virtuelle
+!!! reminder "Rappel"
+    Sauvegarde tes notebooks avant d’exécuter des cellules lourdes.
+
+!!! definition "Language Compilé et language interprété"
+    Il existe deux grandes familles de langages de programmation :
+    1. Langages Compilés :
+        - Exemples : C++, C#, Cobol
+        - Fonctionnement : Lorsque l'on écrit du code avec un langage compilé, il faut d'abord le compiler pour pouvoir l'exécuter
+        Cette compilation transforme le code en langage machine pour en faire un exécutable
+        - Inconvénient : Pour un gros programme, la compilation peut prendre un certain temps
+        - Avantage : Le programme généré est rapide à s'exécuter
+    2. Langages Interprétés :
+        - Exemples : Perl, SQL, et notre Python
+        - Fonctionnement : Quand on écrit du code, celui-ci est lu par un interpréteur, un logiciel qui lit le script pour l'exécuter
+        - Avantage : Il n'y a pas de temps perdu à la compilation
+        - Inconvénient : C'est un peu plus lent à l'exécution
+    Cas hybride : Certains langages, comme Java, sont entre les deux, car ils sont compilés non pas pour créer un exécutable direct, mais pour être lancés dans une > machine virtuelle
 
 
 Le typage est dynamique :
