@@ -19,21 +19,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install site builders
+      - name: Install Jupyter Book + publisher
         run: |
-          pip install mkdocs-material jupyter-book ghp-import
-
-      - name: Build MkDocs
-        run: mkdocs build --clean
+          pip install jupyter-book ghp-import
 
       - name: Build Jupyter Book
         run: jupyter-book build book
-
-      - name: Merge Book into MkDocs site
-        run: |
-          mkdir -p site/notebooks
-          rsync -av --delete book/_build/html/ site/notebooks/
-          touch site/.nojekyll
 
       - name: Configure git for push
         run: |
@@ -43,3 +34,4 @@ jobs:
 
       - name: Deploy to gh-pages
         run: ghp-import -n -p -f site
+        
