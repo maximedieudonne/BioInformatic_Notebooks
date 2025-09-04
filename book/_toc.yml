@@ -129,8 +129,11 @@ parts:
       - file: tutos/06_traitement_image/0600_filtres
       - file: tutos/06_traitement_image/0601_convolution
 
+  - caption: "Comprendre et maitriser Python"
+    chapters:
+      - file: tutos/07_maitrise_python/0700_comprendre_fonctionnement_python
+
   - caption: "Glossaire"
-  # présentation des techniques de traitement d'image
     chapters:
       - file: tutos/08_glossaire/0800_glossaire_informatique
       - file: tutos/08_glossaire/0801_glossaire_biologie

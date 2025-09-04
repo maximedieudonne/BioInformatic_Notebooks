@@ -8,3 +8,4 @@ dependencies:
   - matplotlib
   - scikit-learn
   - jupyterlab
+  - jupyter-book
