@@ -2,286 +2,290 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/00_metier/0000_metier_bioinformaticien/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/00b_biodonnees/00b00_type_images/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/00b_biodonnees/00b01_techniques_imagerie/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/00b_biodonnees/00b02_base_donnees_ouvertes/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/01_science_ouverte/0100_appliquer_principes_fair/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02a_routines_gestion_projet/02a000_data_management/</loc>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02a_routines_gestion_projet/02a00_planifier_projet/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02a_routines_gestion_projet/02a01_rediger_bibliographie/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02b_routines_acquisition_donnee/02b00_telechargement_massif_images/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02b_routines_acquisition_donnee/02b01_organisation_metadonnees/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02b_routines_acquisition_donnee/02b02_mise_en_place_base_structuree/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02b_routines_acquisition_donnee/02b03_stockage_donnees_omero/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02c_routines_pretraitement_controle_qualite/02c00_controle_qualite/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02c_routines_pretraitement_controle_qualite/02c01_verifier_int%C3%A9grite_fichiers/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02c_routines_pretraitement_controle_qualite/02c02_normaliser_formats/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02c_routines_pretraitement_controle_qualite/02c03_construire_pipelines_annotation_labellisation/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02d_routines_analyse/02d00_analyse/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02d_routines_analyse/02d01_segmenter_image_cellule/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02d_routines_analyse/02d02_visualisation_donnees/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02e_routines_gestion_code/02c00_creation_projet/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02e_routines_gestion_code/02c01_gestion_dependances/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02e_routines_gestion_code/02c02_fonctions_test/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02e_routines_gestion_code/02c03_creer_un_pipeline/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02e_routines_gestion_code/02c04_integrer_paquet_pipeline/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02f_routines_deploiment/02f00_creer_paquet_bioinfo/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02f_routines_deploiment/02f01_conteneurisation/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02f_routines_deploiment/02f02_deploiement_cluster_HPC/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02g_routines_reporting/02g00_generer_rapports_automatises/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02g_routines_reporting/02g01_produire_figures_tableaux_metriques/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/02g_routines_reporting/02g02_preparer_depots/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03a_outils_numeriques/03a01_zotero/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03a_outils_numeriques/03a02_github/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03a_outils_numeriques/03a03_conda_mamba/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03a_outils_numeriques/03a04a_imageJ/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03a_outils_numeriques/03a04b_napari/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03a_outils_numeriques/03a05_omero/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03a_outils_numeriques/03a07_snakemake/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03a_outils_numeriques/03a08_Rstudio/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03a_outils_numeriques/03a09_latex/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03b_outils_numeriques_neuroimagerie/03b00_fmriprep/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03b_outils_numeriques_neuroimagerie/03b01_freesurfer/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03b_outils_numeriques_neuroimagerie/03b02_spm/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03b_outils_numeriques_neuroimagerie/03b03_nibabel/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03c_state_of_the_art/03c00_segmentation_cellule_startdist/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/03c_state_of_the_art/03c01_segmentation_cellule_cellpose/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/04_packages_python/0400_scikit-image/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/04_packages_python/0401_numpy/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/04_packages_python/0402_pandas/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/04_packages_python/0403_matplotlib/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/04_packages_python/0404_nibabel/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/04_packages_python/0405_napari/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/04_packages_python/0405_opencv/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0500_regression_lineaire/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0501_regression_logistique/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0502_arbre_de_decision/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0503_random_forest/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0504_kmean_clustering/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0505_knearest_neighbors/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0506_naive_bayes/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0507_suport_vector_machine/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0508_gradient_boosting/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0509_principal_component_analysis/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0510_recurent_neural_network/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0511_long_short_term_memory/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0512_gaussian_mixture_model/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/05_machine_learning/0513_reinforcement_learning/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/06_traitement_image/0600_filtres/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/06_traitement_image/0601_convolution/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/07_maitrise_python/0700_comprendre_fonctionnement_python/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/08_glossaire/0800_glossaire_informatique/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
     <url>
          <loc>https://maximedieudonne.github.io/BioInformatic_Notebooks/_sources/tutos/08_glossaire/0801_glossaire_biologie/</loc>
-         <lastmod>2025-09-04</lastmod>
+         <lastmod>2025-09-08</lastmod>
     </url>
 </urlset>
