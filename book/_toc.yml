@@ -22,6 +22,7 @@ parts:
 
   - caption: "Les routines de gestion de projet"
     chapters:
+      - file: tutos/02a_routines_gestion_projet/02a000_data_management
       - file: tutos/02a_routines_gestion_projet/02a00_planifier_projet
       - file: tutos/02a_routines_gestion_projet/02a01_rediger_bibliographie # comment faire une bibliographie -> zotero
   
